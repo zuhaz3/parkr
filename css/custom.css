@@ -1,4 +1,4 @@
-body, html {
+fbody, html {
   overflow-x: hidden;
 }
 
@@ -81,4 +81,10 @@ h1 {
 }
 .renting p {
   color: white;
+}
+
+input
+{
+  display:block;
+  margin:10px;
 }
