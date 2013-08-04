@@ -44,7 +44,7 @@ h1 {
 }
 
 .tagline {
-  margin-top: 70px;
+  margin-top: 120px;  /* if you move/remove the arrow, change the margin-top to 70px */
 }
 .tagline h1 {
   color: white;
