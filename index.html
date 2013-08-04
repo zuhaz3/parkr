@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
   </head>
   <body >
 
@@ -106,13 +111,17 @@
           <div class="row">
 
             <div class="col-10 col-offset-1">
-              <form name="parking" id="parking" method="get">
-                <input id="name" type="text" placeholder="Enter your Name">
-                <input id="phone" type="text" placeholder="Enter your Phone">
-                <input id="email" type="text" placeholder="Enter your Email">
-                <input id="address" type="text" placeholder="Enter your Address">
-                <button type="button" class="btn btn-primary" id="submit">Submit</button>
-            </form>
+              <form name="parking" id="parking" action="Javascript:sendDataController()" method="post">
+                <input id="name" type="text" placeholder="Enter your Name" required>
+                <input id="phone" type="number" placeholder="Enter your Phone" required>
+                <input id="email" type="email" placeholder="Enter your Email" required>
+                <input id="address" type="text" placeholder="Enter your Address" required>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+              </form>
+              <div id="outputDiv" style="height:30px;"></div>
+              <div id="map-canvas" style="height:300px" width="1000px"></div>
+
+  <iframe width="5" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?t=m&amp;dg=opt&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=77.694388,158.027344&amp;z=3&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?t=m&amp;dg=opt&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=77.694388,158.027344&amp;z=3&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
             </div>
 
           </div>
@@ -126,6 +135,5 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="submit.js"></script>
   </body>
 </html>

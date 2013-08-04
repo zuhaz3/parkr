@@ -24,14 +24,8 @@ $( "#rent" ).click(function() {
 });
 
 $('.return').click(function(){
-
-  $('.return').addClass('animated fadeOutUp');
-  // $('.return').toggle();
-  $('.zones').addClass('animated fadeOutUp'); /*NEED TO GET ORIGNAL 2 BUTTONS TO SHOW UP AGAIN AND ALSO IF YOU WANT TO PUT THE ARROW SOMEWHERE ELSE, TAKE OUT THE MARKED LINE ABOVE AND ALSO THE TAGLINE CLASS IN THE CSS*/
-  // $('.zones').toggle();
-  // $('.go').show();    
-  // $('.go').removeClass('animated fadeOutUp');
-  // $('.go').addClass('animated fadeInUp');
+  $('.buttons').show();
+  $('.zone').hide();
 
 });
 
