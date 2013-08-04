@@ -17,22 +17,28 @@ counterRef.on('value', function(s) {
 	counterVal = s.val();
 });
 
+$( document ).ready(function() {
+  $('#paypalButton1').click(function() {
+    zoneSelected(1);
+  });
+});
+
 function zoneSelected(num) {
   selectedzone = num;
+  var ref = new Firebase('http://parkr.firebaseio.com/');
+  ref.on('child_added', function(s) {
+    if (typeof s.val() == 'object') {
+      var json_string = $.parseJSON(s.val().entry);
+      console.log(json_string);
+      if (json_string.zone == selectedzone) {
+        getStatusVal(json_string);
+      }
+      else {
+        notzone++;
+      }
+    }
+  });
 }
-
-var ref = new Firebase('http://parkr.firebaseio.com/');
-ref.on('child_added', function(s) {
-  if (typeof s.val() == 'object') {
-    var json_string = $.parseJSON(s.val().entry);
-    if (json_string.zone == selectedzone) {
-      getStatusVal(json_string);
-    }
-    else {
-      notzone++;
-    }
-  }
-});
  
 function getStatusVal(obj) {
   console.log(obj.status);

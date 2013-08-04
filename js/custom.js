@@ -4,16 +4,16 @@ $( document ).ready(function() {
 	$('.renting').hide();
   $('.return').hide();
 	$('.tagline').addClass('animated fadeInDown');
+  $('#paypalButton').hide();
 });
 
 $( "#reserve" ).click(function() {
   $('.buttons').addClass('animated fadeOutUp');
   $('.buttons').hide();
-  $('.tagline').css("margin-top","-22px");  //If you get move/get rid of arrow, remove this line
   $('.zone').addClass('animated fadeInUp');
   $('.zone').show();
-  $('.return').addClass('animated fadeInUp');
-  $('.return').show();
+  $('#paypalButton').show();
+
 });
 
 $( "#rent" ).click(function() {
@@ -23,38 +23,22 @@ $( "#rent" ).click(function() {
   $('.renting').toggle();
 });
 
-$('.return').click(function(){
-  $('.buttons').show();
-  $('.zone').hide();
-
+$( "#one" ).click(function() {
+  $('#1').addClass('animated fadeInDown');
+  $('#1').toggle();
 });
 
-$("#one").hover(
-  function () {
-    $('#1').show();
-  },
-  function () {
-  	$('#1').hide();
-  }
-);
+$( "#two" ).click(function() {
+  $('#2').addClass('animated fadeInDown');
+  $('#2').toggle();
+});
 
-$("#two").hover(
-  function () {
-    $('#2').show();
-  },
-  function () {
-  	$('#2').hide();
-  }
-);
+$( "#three" ).click(function() {
+  $('#3').addClass('animated fadeInDown');
+  $('#3').toggle();
+});
 
-$("#three").hover(
-  function () {
-    $('#3').show();
-  },
-  function () {
-  	$('#3').hide();
-  }
-);
+
 
 $("#four").hover(
   function () {
