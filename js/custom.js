@@ -1,19 +1,20 @@
 $( document ).ready(function() {
-    	$('.price').hide();
-		$('.zone').hide();
-		$('.renting').hide();
+    $('.price').hide();
+	$('.zone').hide();
+	$('.renting').hide();
 });
 
 $( "#reserve" ).click(function() {
   $('.buttons').hide();
+  $('.zone').addClass('animated fadeInUp');
   $('.zone').show();
 });
 
 $( "#rent" ).click(function() {
   $('.rent').hide();
   $('.tagline').hide();
-  $('.renting').show();
   $('.renting').addClass('animated fadeInRight');
+  $('.renting').toggle();
 });
 
 $("#one").hover(
