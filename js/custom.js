@@ -2,9 +2,11 @@ $( document ).ready(function() {
     $('.price').hide();
 	$('.zone').hide();
 	$('.renting').hide();
+	$('.tagline').addClass('animated fadeInDown');
 });
 
 $( "#reserve" ).click(function() {
+  $('.buttons').addClass('animated fadeOutUp');
   $('.buttons').hide();
   $('.zone').addClass('animated fadeInUp');
   $('.zone').show();
