@@ -1,11 +1,19 @@
 $( document ).ready(function() {
     	$('.price').hide();
 		$('.zone').hide();
+		$('.renting').hide();
 });
 
 $( "#reserve" ).click(function() {
   $('.buttons').hide();
   $('.zone').show();
+});
+
+$( "#rent" ).click(function() {
+  $('.rent').hide();
+  $('.tagline').hide();
+  $('.renting').show();
+  $('.renting').addClass('animated fadeInRight');
 });
 
 $("#one").hover(

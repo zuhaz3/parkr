@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, p {
 	font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+	margin: 0px;
+}
+
 .image {
   background-repeat: no-repeat;
   background-position: top bottom;
@@ -50,7 +54,7 @@ h1, h2, h3, h4, h5, p {
 		color:white;
 		font-weight:100;
 		font-size:45px;
-		line-height:60px;
+		line-height:80px;
 	}
 }
 
@@ -77,4 +81,11 @@ h1, h2, h3, h4, h5, p {
 	color:white;
 	margin-right:20px;
 	margin-bottom:15px;
+}
+
+.renting {
+	margin-top:70px;
+	p {
+		color:white;
+	}
 }
